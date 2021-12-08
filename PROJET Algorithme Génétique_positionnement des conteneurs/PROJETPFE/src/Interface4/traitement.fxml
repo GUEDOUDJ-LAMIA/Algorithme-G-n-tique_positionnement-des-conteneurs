@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface4.traitementController">
+   <children>
+      <BorderPane prefHeight="650.0" prefWidth="1200.0" style="-fx-background-color: #882255;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Label text="L'algorithme génétique" textAlignment="JUSTIFY" textFill="WHITE" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Footlight MT Light" size="24.0" />
+               </font>
+            </Label>
+         </top>
+         <center>
+            <SplitPane dividerPositions="0.38235294117647056" prefHeight="160.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <items>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="337.0" prefWidth="318.0" style="-fx-background-image: container31.jpg;">
+                     <children>
+                        <BorderPane layoutX="28.0" layoutY="89.0" prefHeight="519.0" prefWidth="342.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                           <left>
+                              <VBox prefHeight="461.0" prefWidth="176.0" spacing="31.0" BorderPane.alignment="CENTER">
+                                 <children>
+                                    <Label text="Nombre d'individu " textFill="#882255">
+                                       <font>
+                                          <Font name="Forte" size="18.0" />
+                                       </font></Label>
+                                    <Label text="Taux De Croisement" textAlignment="JUSTIFY" textFill="#882255">
+                                       <font>
+                                          <Font name="Forte" size="18.0" />
+                                       </font></Label>
+                                    <Label text="Taux De Mutation" textFill="#882255">
+                                       <font>
+                                          <Font name="Forte" size="18.0" />
+                                       </font></Label>
+                                    <Label text="Temps d'exécution" textAlignment="JUSTIFY" textFill="#882255">
+                                       <font>
+                                          <Font name="Forte" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                                 <opaqueInsets>
+                                    <Insets />
+                                 </opaqueInsets>
+                                 <padding>
+                                    <Insets left="20.0" top="25.0" />
+                                 </padding>
+                                 <BorderPane.margin>
+                                    <Insets top="100.0" />
+                                 </BorderPane.margin>
+                              </VBox>
+                           </left>
+                           <center>
+                              <VBox alignment="TOP_CENTER" prefHeight="464.0" prefWidth="279.0" spacing="15.0">
+                                 <children>
+                                    <Spinner fx:id="nmbrINDV" prefHeight="30.0" prefWidth="170.0" style="-fx-background-color: #882255;">
+                                       <effect>
+                                          <DropShadow color="#882255" />
+                                       </effect></Spinner>
+                                    <Label fx:id="TAUXCROI" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="5.0" prefHeight="40.0" prefWidth="170.0" text="[ 80%  ~  100% ]" textAlignment="JUSTIFY" textFill="#868282">
+                                       <font>
+                                          <Font name="Arial Narrow" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow color="#882255" />
+                                       </effect></Label>
+                                    <Label fx:id="TAUXMUT" alignment="CENTER" contentDisplay="BOTTOM" graphicTextGap="5.0" prefHeight="40.0" prefWidth="170.0" text="[ -1  ~  0,5 ]" textFill="#868282">
+                                       <font>
+                                          <Font name="Arial Narrow" size="20.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow color="#882255" />
+                                       </effect>
+                                    </Label>
+                                    <JFXTextArea fx:id="tempexe" editable="false" focusColor="#882255" maxHeight="20.0" maxWidth="170.0" prefColumnCount="20" prefHeight="20.0" prefRowCount="5" prefWidth="170.0" style="-fx-text-fill: #882255; -fx-font-size: 15px;" unFocusColor="#882255">
+                                       <font>
+                                          <Font name="Footlight MT Light" size="12.0" />
+                                       </font>
+                                       <effect>
+                                          <DropShadow color="#882255" />
+                                       </effect>
+                                       <VBox.margin>
+                                          <Insets />
+                                       </VBox.margin>
+                                    </JFXTextArea>
+                                 </children>
+                                 <BorderPane.margin>
+                                    <Insets top="105.0" />
+                                 </BorderPane.margin>
+                                 <padding>
+                                    <Insets top="5.0" />
+                                 </padding>
+                              </VBox>
+                           </center>
+                        </BorderPane>
+                        <Button fx:id="btn_lancer" layoutX="46.0" layoutY="380.0" mnemonicParsing="false" onAction="#lancer" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Lancer" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia Bold" size="18.0" />
+                           </font>
+                           <effect>
+                              <Glow />
+                           </effect>
+                           <padding>
+                              <Insets top="1.0" />
+                           </padding>
+                        </Button>
+                        <Label layoutX="-21.0" layoutY="14.0" prefHeight="50.0" prefWidth="476.0" text="Paramétres génétique" textAlignment="JUSTIFY" textFill="#882255" underline="true" wrapText="true">
+                           <font>
+                              <Font name="Georgia" size="36.0" />
+                           </font>
+                           <padding>
+                              <Insets left="70.0" />
+                           </padding>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                     <children>
+                        <TabPane fx:id="tabpane" layoutX="93.0" layoutY="36.0" prefHeight="337.0" prefWidth="406.0" stylesheets="@../PFE/STYLE.css" tabClosingPolicy="UNAVAILABLE" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                          <tabs>
+                            <Tab fx:id="population" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Population initiale ">
+                                 <content>
+                                    <ScrollPane fx:id="scrollpop">
+                                       <content>
+                                          <VBox fx:id="vboxpop" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="desgine" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Simulation de la population initiale">
+                                 <content>
+                                    <ScrollPane fx:id="scrolldesg">
+                                       <content>
+                                          <VBox fx:id="vboxdesg" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                            <Tab fx:id="selection" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Selection ">
+                                 <content>
+                                    <ScrollPane fx:id="scrollselec">
+                                       <content>
+                                          <VBox fx:id="vboxselec" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="croisement" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Croisement ">
+                                 <content>
+                                    <ScrollPane fx:id="scrollcroi">
+                                       <content>
+                                          <VBox fx:id="vboxcroi" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="correctioncr" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Correction du Croisement">
+                                 <content>
+                                    <ScrollPane fx:id="scrollcorrcroi">
+                                       <content>
+                                          <VBox fx:id="vboxcorrcroi" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="Npopulation" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Nouvelle population">
+                                 <content>
+                                    <ScrollPane fx:id="scrollNpop">
+                                       <content>
+                                          <VBox fx:id="vboxNpop" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="desgineN" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Simulation de la nouvelle population">
+                                 <content>
+                                    <ScrollPane fx:id="scrolldesgN">
+                                       <content>
+                                          <VBox fx:id="vboxdesgN" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="mutation" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Mutation">
+                                 <content>
+                                    <ScrollPane fx:id="scrollmut">
+                                       <content>
+                                          <VBox fx:id="vboxmut" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="correctionmut" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Correction de la Mutation">
+                                 <content>
+                                    <ScrollPane fx:id="scrollcorrmut">
+                                       <content>
+                                          <VBox fx:id="vboxcorrmut" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content>
+                              </Tab>
+                              <Tab fx:id="mielleur" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Meilleurs individu ">
+                                 <content>
+                                    <ScrollPane fx:id="scrollmind">
+                                       <content>
+                                          <VBox fx:id="vboxmind" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                              <Tab fx:id="SolOPti" style="-fx-background-color: #bbbbbb; -fx-font: 14pt &quot;Georgia&quot;;" text="Solution Optimale">
+                                 <content>
+                                    <ScrollPane fx:id="scrollsolop">
+                                       <content>
+                                          <VBox fx:id="vboxsolop" />
+                                       </content>
+                                    </ScrollPane>
+                                 </content></Tab>
+                          </tabs>
+                           <effect>
+                              <DropShadow color="#882255" />
+                           </effect>
+                        </TabPane>
+                     </children>
+                  </AnchorPane>
+              </items>
+            </SplitPane>
+         </center>
+         <bottom>
+            <ButtonBar prefHeight="58.0" prefWidth="700.0" style="-fx-background-color: bbbbbb;" BorderPane.alignment="CENTER">
+               <buttons>
+                  <Button fx:id="btn_réinit" mnemonicParsing="false" onAction="#reinitialiser" onDragDetected="#reinitialiser" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Réinitialiser" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Button>
+                  <Button fx:id="btn_Retour" mnemonicParsing="false" onAction="#buttonClicked" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Retour" textFill="WHITE">
+                     <font>
+                        <Font name="Georgia Bold" size="24.0" />
+                     </font>
+                     <effect>
+                        <Glow />
+                     </effect></Button>
+               </buttons>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets right="5.0" />
+               </padding>
+            </ButtonBar>
+         </bottom>
+      </BorderPane>
+   </children>
+</AnchorPane>

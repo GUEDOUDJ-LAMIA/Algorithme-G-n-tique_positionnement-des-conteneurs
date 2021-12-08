@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Interface5.updateContoller">
+   <children>
+      <BorderPane layoutY="2.0" prefHeight="650.0" prefWidth="500.0" style="-fx-background-color: #882255;" AnchorPane.bottomAnchor="-2.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="2.0">
+         <center>
+            <VBox prefHeight="200.0" prefWidth="100.0" spacing="30.0" style="-fx-background-color: bbbbbb;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox prefHeight="63.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="KEY" size="20" />
+                        <JFXTextField fx:id="filedID" focusColor="#882255" prefHeight="25.0" prefWidth="246.0" promptText="ID Conteneur" unFocusColor="#882255">
+                           <font>
+                              <Font name="Cambria" size="14.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXButton fx:id="btn_affiche" onAction="#getConteneur" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="43.0" prefWidth="74.0" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Affiche" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia Bold" size="12.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                     <padding>
+                        <Insets left="50.0" />
+                     </padding>
+                  </HBox>
+                  <HBox prefHeight="63.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="COGS" size="20" text="" />
+                        <JFXTextField fx:id="fieldProd" focusColor="#882255" prefHeight="25.0" prefWidth="350.0" promptText="Produit : Porduit 1, Produit 2 , Produit 3" unFocusColor="#882255">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="63.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="DATABASE" size="20" />
+                        <JFXTextField fx:id="fieldType" focusColor="#882255" prefHeight="25.0" prefWidth="350.0" promptText="Type : 10 Pieds,  20 Pieds,  40 Pieds" unFocusColor="#882255">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="63.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="CALENDAR" size="20">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </FontAwesomeIconView>
+                        <JFXTextField fx:id="fielddarr" focusColor="#882255" prefHeight="25.0" prefWidth="350.0" promptText="Date d'arrivée" unFocusColor="#882255">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="63.0" prefWidth="400.0" spacing="10.0">
+                     <children>
+                        <FontAwesomeIconView glyphName="CALENDAR" size="20" />
+                        <JFXTextField fx:id="fielddd" focusColor="#882255" prefHeight="25.0" prefWidth="350.0" promptText="Date départ" unFocusColor="#882255">
+                           <font>
+                              <Font name="Cambria" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" spacing="50.0">
+                     <padding>
+                        <Insets top="20.0" />
+                     </padding>
+                     <children>
+                        <JFXButton fx:id="btn_modifier" buttonType="RAISED" onAction="#Modifier" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="55.0" prefWidth="183.0" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Modifier" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                        <JFXButton fx:id="btn_supp" onAction="#Supprimer" onMouseEntered="#Affiche11" onMouseExited="#Affiche1" prefHeight="55.0" prefWidth="183.0" ripplerFill="#872254" style="-fx-background-color: #882255;" stylesheets="@../PFE/STYLE.css" text="Supprimer" textFill="WHITE">
+                           <font>
+                              <Font name="Georgia Bold" size="18.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </HBox>
+               </children>
+               <BorderPane.margin>
+                  <Insets top="50.0" />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="50.0" left="50.0" right="50.0" top="50.0" />
+               </padding>
+            </VBox>
+         </center>
+         <top>
+            <Label prefHeight="40.0" prefWidth="317.0" text="Modification et Suppression" textFill="#bbbbbb" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="Cambria Bold" size="24.0" />
+               </font>
+               <padding>
+                  <Insets top="10.0" />
+               </padding>
+            </Label>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

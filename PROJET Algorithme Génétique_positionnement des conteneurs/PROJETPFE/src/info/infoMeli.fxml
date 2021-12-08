@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="600.0" prefWidth="315.0" style="-fx-background-color: #882255;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="interface1.pagdacController">
+   <children>
+      <Circle blendMode="COLOR_DODGE" depthTest="ENABLE" fill="#ebebeb" layoutX="150.0" layoutY="95.0" radius="59.0" stroke="#fcf6f6" />
+      <JFXButton contentDisplay="RIGHT" layoutX="61.0" layoutY="155.0" prefHeight="49.0" prefWidth="178.0" text="Misraoui Mellissa" textFill="WHITE">
+         <font>
+            <Font name="Freestyle Script" size="24.0" />
+         </font>
+         <graphic>
+            <FontAwesomeIconView fill="WHITE" glyphName="SORT_DESC" size="14" wrappingWidth="10.857142925262451" />
+         </graphic>
+      </JFXButton>
+      <HBox layoutY="231.0">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="21.0" prefWidth="313.0">
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+               <children>
+                  <FontAwesomeIconView fill="WHITE" glyphName="ENVELOPE" size="20" />
+                  <Label text="E-mail :  " textFill="WHITE">
+                     <font>
+                        <Font name="Georgia" size="12.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="20.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label text="misraouimelissa@gmail.com" textFill="#b8b1b1">
+                     <font>
+                        <Font name="Franklin Gothic Medium Cond" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="290.0" prefHeight="21.0" prefWidth="315.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="MORTAR_BOARD" size="17" />
+            <Label text="Spécialité :" textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="Licence en Informatique Académique " textFill="#b8b1b1">
+               <font>
+                  <Font name="Franklin Gothic Book" size="11.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="319.0" prefHeight="21.0" prefWidth="315.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="ARCHIVE" size="20" />
+            <Label text="Section : " textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="ACAD A" textFill="#b8b1b1">
+               <font>
+                  <Font name="Franklin Gothic Medium" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+      </HBox>
+      <HBox layoutY="347.0" />
+      <HBox alignment="CENTER_LEFT" layoutY="347.0" prefHeight="21.0" prefWidth="315.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="HOME" size="20" />
+            <Label text="université : " textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="U.S.T.H.B" textFill="#b8b1b1">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+               <font>
+                  <Font name="Franklin Gothic Medium" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutY="262.0" prefHeight="21.0" prefWidth="313.0">
+         <padding>
+            <Insets left="20.0" />
+         </padding>
+         <children>
+            <FontAwesomeIconView fill="WHITE" glyphName="QRCODE" size="20" />
+            <Label text="Matricule :  " textFill="WHITE">
+               <font>
+                  <Font name="Georgia" size="12.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin>
+            </Label>
+            <Label text="201500009820" textFill="#b8b1b1">
+               <font>
+                  <Font name="Franklin Gothic Medium Cond" size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <Label layoutX="2.0" layoutY="204.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="21.0" prefWidth="315.0" textFill="WHITE" underline="true">
+         <font>
+            <Font name="Georgia" size="12.0" />
+         </font>
+      </Label>
+      <JFXButton fx:id="btn_Mel_Quitter" buttonType="RAISED" layoutX="85.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#Quitter_info_Mel" prefHeight="49.0" prefWidth="146.0" ripplerFill="#b8b1b1" text="Quitter" textFill="#b8b1b1">
+         <font>
+            <Font name="Georgia" size="24.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
